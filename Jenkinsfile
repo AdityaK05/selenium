@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/AdityaK05/selenium'
+                git 'https://github.com/AdityaK05/selenium.git'
             }
         }
 
