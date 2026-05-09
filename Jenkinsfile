@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git branch:'main',url:'https://github.com/AdityaK05/selenium.git'
+                git 'https://github.com/AdityaK05/selenium'
             }
         }
 
@@ -28,4 +28,4 @@ pipeline {
         }
 
     }
-
+}
