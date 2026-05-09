@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/Selenium-Maven-Jenkins.git'
+                git branch:'main',url:'https://github.com/AdityaK05/selenium.git'
             }
         }
 
