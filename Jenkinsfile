@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone') {
+            steps {
+                git 'https://github.com/YOUR_USERNAME/Selenium-Maven-Jenkins.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+
+        stage('Selenium Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Custom Message') {
+            steps {
+                echo 'Selenium Automation Testing Executed Successfully!'
+            }
+        }
+
+    }
+
